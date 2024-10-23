@@ -1,0 +1,593 @@
+body{
+    
+    font-family: Verdana, sans-serif;
+    color: rgb(35, 65, 148);
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+
+
+
+
+
+/* Navbar Styles */
+.navbar {
+    
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background: rgba(253,230,152,1);
+    color: rgb(35, 65, 148);
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar-logo h1 {
+    font-size: 24px;
+    color: rgb(35, 65, 148);
+}
+
+.navbar-phone a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(35, 65, 148);
+}
+
+.navbar-phone a:hover {
+    color: #e67e22;
+}
+
+/* Navbar Links */
+.navbar-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar-links a {
+    text-decoration: none;
+    font-size: 16px;
+    color: rgb(35, 65, 148);
+}
+
+.navbar-links a:hover {
+    color: #e67e22;
+}
+
+/* Hamburger Menu (hidden by default on large screens) */
+.navbar-toggle {
+    display: none;
+    cursor: pointer;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: rgb(35, 65, 148);
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Phone number and logo stack vertically on small screens */
+    .navbar-logo h1 {
+        font-size: 20px;
+    }
+
+    .navbar-phone {
+        display: none; /* Hide phone number on small screens */
+    }
+
+    .navbar-links {
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #34495e;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 300px;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.3s ease;
+        visibility: hidden;
+    }
+
+    .navbar-links.active {
+        height: auto;
+        visibility: visible;
+    }
+
+    .navbar-links a {
+        padding: 10px;
+        width: 100%;
+        text-align: center;
+        color: #fff;
+    }
+
+    /* Show hamburger menu */
+    .navbar-toggle {
+        display: block;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.home{
+    color: purple;
+    text-align: center;
+    height: 100vh;
+    max-height: 500px;
+    
+    }
+.home_inner{
+    margin-top: 10rem;
+
+}
+.main-container-text{
+    font-family: Verdana, sans-serif;
+    color: rgb(35, 65, 148);
+    font-size: 1rem;
+}
+.main-container-heading{
+    font-family: Verdana, sans-serif;
+
+    
+    color: rgb(35, 65, 148);
+    font-size: 3rem;
+    
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Full-screen container */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full screen height */
+    width: 100vw; /* Full screen width */
+    background-color: #2c3e50; /* Dark background color */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Typing Effect Styling */
+#typed-text {
+    font-size: 48px;
+    color: #e67e22; /* Orange color for title */
+    overflow: hidden; /* Ensures text stays within bounds during typing */
+    white-space: nowrap; /* Prevents text wrapping */
+    border-right: 4px solid #e67e22; /* Blinking cursor effect */
+    width: 0;
+    animation: typing 4s steps(40, end) forwards; /* Typing animation */
+}
+
+/* Typing Animation Keyframes */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #e67e22; }
+}
+
+/* Responsive Design for mobile */
+@media (max-width: 768px) {
+    .main-container {
+        padding: 30px;
+    }
+
+    #typed-text {
+        font-size: 32px; /* Smaller font size for mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slide-img {
+    width: 100px;
+    height: 100px;
+    animation: scroll 60s linear infinite;
+  }
+  
+  .slide-track {
+    width: 100%;
+    display: flex;
+    gap: 3em;
+    overflow: hidden;
+  }
+  .slider-head{
+    margin-bottom: 1em;
+  }
+  
+  .slider {
+    margin-top: 40px;
+    background-color: whitesmoke;
+    padding: 8em 2em;
+  }
+  
+  @keyframes scroll {
+    0% {transform: translateX(0);}
+    100% {transform: translatex(-1000%)}
+  }
+  
+
+
+
+  /* Grid container with 2 equal columns */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns (50% each) */
+    gap: 20px; /* Space between the columns */
+    padding: 20px;
+    align-items: center; /* Vertically align items */
+  }
+  
+  /* Styling for individual grid items */
+  .grid-item {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    color: #333;
+  }
+  
+  /* Styling for the About Us image */
+  .about-us-img {
+    width: 100%; /* Make the image fill the container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+  }
+  
+  /* Responsive behavior: Stack columns on smaller screens */
+  @media (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Single column layout */
+    }
+  }
+  
+
+
+
+
+
+
+
+  .services-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.services-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.services-section .services-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.services-section .service-card {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services-section .service-card h3 {
+    font-size: 24px;
+    color: #e67e22;
+    margin-bottom: 10px;
+}
+
+.services-section .service-card p {
+    font-size: 16px;
+    color: #666;
+}
+
+.services-section .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .services-section .services-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services-section .service-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Scoped to the industry section */
+.industry-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.industry-section h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #1a1a1a;
+}
+
+.industry-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.industry-card {
+    position: relative;
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1;
+}
+
+.industry-card h3,
+.industry-card p,
+.industry-card .icon {
+    position: relative;
+    z-index: 2;
+    transition: color 0.3s ease;
+}
+
+.industry-card h3 {
+    font-size: 24px;
+    color: #3498db; /* Default color */
+    margin: 20px 0 10px;
+}
+
+.industry-card p {
+    font-size: 16px;
+    color: #666; /* Default color */
+    margin-bottom: 10px;
+}
+
+.industry-card .icon {
+    font-size: 40px;
+    color: #3498db;
+}
+
+.industry-card img {
+    width: 50px;
+    height: 50px;
+}
+
+.industry-card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.8), rgba(255, 153, 0, 0.8));
+    z-index: 1;
+    transition: top 0.5s ease;
+}
+
+.industry-card:hover::before {
+    top: 0;
+}
+
+.industry-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.industry-card:hover h3,
+.industry-card:hover p,
+.industry-card:hover .icon {
+    color: #fff; /* Change text and icon color to white on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .industry-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .industry-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+    padding: 10px;
+}
+
+.footer-column h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #e67e22;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 10px;
+    color: #bdc3c7;
+}
+
+.footer-column ul li a {
+    color: #bdc3c7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #e67e22;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    filter: invert(1); /* Invert icons to white for better contrast */
+    transition: filter 0.3s ease;
+}
+
+
+
+/* Footer Bottom Section */
+.footer-bottom {
+    margin-top: 30px;
+    border-top: 1px solid #34495e;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #bdc3c7;
+}
+
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
